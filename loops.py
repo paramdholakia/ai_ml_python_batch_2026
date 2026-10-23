@@ -40,7 +40,7 @@ range(1,11) => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 #     print(number, end=" ")
 
 
-# Take two input from user and print all the numbers between those two numbers 
+# Take two input from user and print all the numbers between those two numbers
 # using for loop
 
 # start = int(input("Enter the starting number: "))
@@ -66,88 +66,108 @@ range(1,11) => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 #         print("Odd Number", i)
 
 
+# 1. Print all numbers between 50 and 100 that are divisible by 4.
+# for i in range(50, 101):
+#     if i % 4 == 0:
+#         print(i, end=" ")
 
-# Exercise 1. Print first 10 natural numbers using FOR loop
-# for i in range(1, 11):
-#     print(i)
+# 2. Find the sum of all numbers between 1 and 100 that are divisible by 7.
 
-# Exercise 2. Display numbers from -10 to -1 using for loop
-# for i in range(-10, 0, 1):
-#     print(i, end=" ")
-
-# Exercise 3. Display a message “Done” after successful execution of for loop
-
-# for i in range(1, 6):
-#     print(i, end=" ")
-# print("Done")
-
-# Exercise 4. Calculate the sum of all numbers from 1 to N
-# N = int(input("Enter a number: "))
 # sum = 0
-
-# for i in range(1, N + 1):
-#     sum += i # sum = sum + i
+# for i in range(1, 101):
+#     if i % 7 == 0:
+#         print(i, sum, sum + i, sep=" | ")
+#         sum += i
 
 # print(sum)
 
-# Exercise 5. Print multiplication table of a given number
-# N = int(input("Enter a number: "))
+# 3. Find the product of all numbers from 1 to 10.
+# temp = 1
 # for i in range(1, 11):
-#     print(f"{N} X {i} = {N * i}")
+#     temp = temp * i
+# print(temp)
 
-# Exercise 6. Calculate the cube of all numbers from 1 to a given number
-# N = int(input("Enter a number: "))
-# for i in range(1 , N + 1):
-#     print(i, i ** 3)
+""" 
+temp = 1
+i : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    temp    i   temp = temp * i
+    1       1   1
+    1       2   2  
+    2       3   6   
+    6       4   24
+    24      5   120   
+    120     6   720   
+    720     7   5040   
+    5040    8   40320  
+    40320   9   362880   
+    362880  10  3628800  
+"""
 
 
-# Exercise 7. Display numbers from a list using a loop
-# list1 = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grapes"]
-#                                                                         ^
-#                                                                         |
-#                                                                         i
-# for i in range(0, len(list1)):
-#     print(list1[i] ,end=" ")
+# 4. Print the square of every number from 1 to 15.
+# for i in range(1, 16):
+#     print(i ** 2, end=" ")
 
-# print()
-# for i in list1:
-#     print(i, end=" ")
+# 5. Print the cube of every number from 1 to 10.
+# for i in range(1, 11):
+#     print(i ** 3, end=" ")
 
 
-# Exercise 8. Count occurrences of a specific element in a list
-# list1 = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grapes",
-#          "Apple" , "Cherry", "Date", "Apple"]
+# 6. Take a number from the user and print all its factors.
+# n = int(input("Enter a value : "))
+# for i in range(1, n + 1):
+#     if n % i == 0:
+#         print(i, end=" ")
 
+# 7. Take a number from the user and count how many factors it has.
+# n = int(input("Enter a value : "))
 # count = 0
-# for i in list1:
-#     if i == "Apple":
-#         count += 1
+# for i in range(1, n + 1):
+#     if n % i == 0:
+#         count += 1 # count = count + 1
+
 # print(count)
 
-# print(list1.count("Apple"))  # Using built-in count() method
+# 8. Take a number from the user and calculate the sum of all its factors.
+# n = int(input("Enter a value : "))
+# sum = 0
+# for i in range(1, n + 1):
+#     if n % i == 0:
+#         sum += i
+# print(sum)
 
 
-# Exercise 9. Print elements from a list present at odd index positions
-# list1 = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grapes"]
-# for i in range(1, len(list1), 2):
-#     print(list1[i], end=" ")
+# 9. Take a number from the user and check whether it is a perfect number.
+# 6 : 1 2 3
+# 1 + 2 +3 = 6
 
-# for i in range(1, len(list1)):
-#     if i % 2 != 0:
-#         print(list1[i], end=" ")
+# 28 : 1 2 4 7 14
+#  1 + 2 + 4 + 7 + 14 = 28
 
-# Exercise 10. Print list in reverse order using a loop
-list1 = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grapes"]
-#         0            1       2          3      4           5         6
-#         -7           -6     -5         -4      -3          -2        -1
+# n = int(input("Enter a value : "))
+# sum = 0
 
-for i in range(len(list1)-1, -1, -1):
-    print(list1[i], end = ",")
-print()
+# for i in range(1, n):
+#     if n % i == 0:
+#         sum += i
 
-for i in range(-1, -len(list1) - 1, -1):
-    print(list1[i], end = ",")
-print()
+# if sum == n:
+#     print("A perfect number!")
+# else:
+#     print("NOT A perfect number!")
 
-for i in list1[::-1]:
-    print(i, end=",")
+
+# 10. Take a number from the user and check whether it is a prime number.
+# 7 -> 2, 3, 4, 5, 6
+# 6 -> 2, 3, 4, 5
+n = int(input("Enter a anumber : "))
+flag = True
+
+for i in range(2, n):
+    if n % i == 0:
+        flag = False
+
+if flag == True:
+    print("NUMBER IS PRIME")
+else:
+    print("NUMBER IS NOT PRIME")
