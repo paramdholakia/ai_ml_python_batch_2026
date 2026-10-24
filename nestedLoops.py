@@ -280,3 +280,33 @@ list1 = [
     [7,8,9]
 ]
 # Diagonal Sum : 1 + 5 + 9 = 15
+
+
+
+# ------------------------------------------
+
+list1 = [1,2,3,4,5,6,7,8,9,10]
+
+target = int(input("Enter a number : "))
+flag = False
+
+for i in range(0, 10):
+    for j in range(i+1, 10):
+        if list1[i] + list1[j] == target:
+            print("Indices found : ",i, j)
+            print("Values :", list1[i], list1[j])
+            flag = True
+
+    if flag:
+        break
+
+""" 
+target = 12
+
+Index   0   1   2   3   4   5   6   7   8   9
+        1   2   3   4   5   6   7   8   9   10
+        i
+            j
+"""
+
+
